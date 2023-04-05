@@ -13,7 +13,7 @@ searchForm.addEventListener('submit', (event) => {
     
     
     const city = searchInput.value;
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=sandy&units=imperial&appid=36c7493f4ad84cfc530906c65c7a4f23')
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${currentAPI_KEY}`)
     .then(res => res.json())
     .then(currentData => {
         currentforecastContainer.innerHTML = ''
