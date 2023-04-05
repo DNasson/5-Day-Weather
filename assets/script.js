@@ -90,7 +90,11 @@ searchForm.addEventListener('submit', (event) => {
             forecastContainer.appendChild(forecastCard)
         }
     })
-   
+    let cities = document.querySelector('#search-input').value;
+        localStorage.setItem("cities", cities);
+        function searchedCities() {
+            let cities = localStorage.getItem("cities");
+        }
 })
 
 var todaysDate = dayjs();
