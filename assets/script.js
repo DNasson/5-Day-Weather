@@ -17,11 +17,18 @@ searchForm.addEventListener('submit', (event) => {
     .then(res => res.json())
     .then(currentData => {
         currentforecastContainer.innerHTML = ''
-        console.log(currentData)
+        
             const element = currentData;
             const currentforecastCard = document.createElement('div');
             currentforecastCard.classList.add('currentforecast-card');
             console.log(currentData)
+
+            // Date
+            let date = element.dt;
+            let formatDate = dayjs.unix(date).format('MM/DD/YYYY')
+            const dateEl = document.createElement('p');
+            dateEl.textContent = `Date: ${formatDate}`;
+            currentforecastCard.appendChild(dateEl);
 
             //icon
             const iconUrl = `https://openweathermap.org/img/w/${element.weather[0].icon}.png`;
@@ -59,7 +66,7 @@ searchForm.addEventListener('submit', (event) => {
         console.log(data.list)
         for (let index = 0; index < data.list.length; index += 8) {
             const element = data.list[index];
-            const forecastCard = document.createElement('div');
+            const forecastCard = document.createElement('card');
             forecastCard.classList.add('forecast-card');
 
             // Date

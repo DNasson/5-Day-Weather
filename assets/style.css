@@ -1,0 +1,14 @@
+.body {
+    display: flex;
+}
+.header {
+    display: flex;
+}
+#currentforecastContainer {
+border-style: dotted;
+size-adjust: auto;
+}
+
+.date {
+    font-weight: bold;
+}
