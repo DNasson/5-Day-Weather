@@ -22,6 +22,12 @@ searchForm.addEventListener('submit', (event) => {
             const currentforecastCard = document.createElement('div');
             currentforecastCard.classList.add('currentforecast-card');
             console.log(currentData)
+
+            //icon
+            const iconUrl = `https://openweathermap.org/img/w/${element.weather[0].icon}.png`;
+            const iconEl = document.createElement('img');
+            iconEl.src = iconUrl; 
+            currentforecastCard.appendChild(iconEl);
             
             // temp
             const temp = element.main.temp;
@@ -29,11 +35,11 @@ searchForm.addEventListener('submit', (event) => {
             tempEl.textContent = `Temperature: ${parseInt(temp)}°F`;
             currentforecastCard.appendChild(tempEl);
 
-            //icon
-            const iconUrl = `https://openweathermap.org/img/w/${element.weather[0].icon}.png`;
-            const iconEl = document.createElement('img');
-            iconEl.src = iconUrl; 
-            currentforecastCard.appendChild(iconEl);
+            // wind speed
+            const wind = element.wind.speed;
+            const windEl = document.createElement('p');
+            windEl.textContent = `Wind Speed: ${parseInt(wind)} MPH`;
+            currentforecastCard.appendChild(windEl);
 
 
             //description
@@ -63,6 +69,12 @@ searchForm.addEventListener('submit', (event) => {
             dateEl.textContent = `Date: ${formatDate}`;
             forecastCard.appendChild(dateEl);
 
+            //icon
+            const iconUrl = `https://openweathermap.org/img/w/${element.weather[0].icon}.png`;
+            const iconEl = document.createElement('img');
+            iconEl.src = iconUrl; 
+            forecastCard.appendChild(iconEl);
+
             // temp
             const temp = element.main.temp;
             const tempEl = document.createElement('p');
@@ -75,11 +87,11 @@ searchForm.addEventListener('submit', (event) => {
             humidityEl.textContent = `Humidity: ${humidity}%`;
             forecastCard.appendChild(humidityEl);
 
-            //icon
-            const iconUrl = `https://openweathermap.org/img/w/${element.weather[0].icon}.png`;
-            const iconEl = document.createElement('img');
-            iconEl.src = iconUrl; 
-            forecastCard.appendChild(iconEl);
+            // wind speed
+            const wind = element.wind.speed;
+            const windEl = document.createElement('p');
+            windEl.textContent = `Wind Speed: ${wind} MPH`;
+            forecastCard.appendChild(windEl);
 
             //description
             const description = element.weather[0].description;
