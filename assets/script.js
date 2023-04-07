@@ -103,8 +103,10 @@ searchForm.addEventListener('submit', (event) => {
         }
     })
     let data = document.querySelector('#search-input').value;
-        localStorage.setItem("cities", data);
+        const upper = data.charAt(0).toUpperCase() + data.slice(1);
+        localStorage.setItem("cities", upper);
         
+
     let cities = localStorage.getItem("cities");
     let cityList = document.querySelector("#city-list");
     
