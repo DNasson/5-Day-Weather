@@ -90,7 +90,7 @@ searchForm.addEventListener('submit', (event) => {
             // wind speed
             const wind = element.wind.speed;
             const windEl = document.createElement('p');
-            windEl.textContent = `Wind Speed: ${wind} MPH`;
+            windEl.textContent = `Wind Speed: ${parseInt(wind)} MPH`;
             forecastCard.appendChild(windEl);
 
             //description
@@ -102,12 +102,22 @@ searchForm.addEventListener('submit', (event) => {
             forecastContainer.appendChild(forecastCard)
         }
     })
-    let cities = document.querySelector('#search-input').value;
-        localStorage.setItem("cities", cities);
-        function searchedCities() {
-            let cities = localStorage.getItem("cities");
-        }
+    let data = document.querySelector('#search-input').value;
+        localStorage.setItem("cities", data);
+        
+    let cities = localStorage.getItem("cities");
+    let cityList = document.querySelector("#city-list");
+    
+    if (cities) {
+      let cityArray = cities.split(",");
+      cityArray.forEach(city => {
+        let button = document.createElement("button");
+        button.textContent = city;
+        cityList.appendChild(button);
+      });
+    }
 })
+
 
 var todaysDate = dayjs();
 $('#today').text(todaysDate.format('dddd MMMM D, YYYY'));
