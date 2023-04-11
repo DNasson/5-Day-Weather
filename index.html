@@ -23,24 +23,28 @@ flex-direction: column;">
     <form id="search-form">
       <label for="search-input">Please search a city</label>
       <input type="text" id="search-input">
-      <button type="submit">search city</button>
+      <button type="submit">Search city</button>
     </form>
     
-
-    <div class="card">
-        <div id="currentforecast-container" class="card-body">
-            <h4 class="card-title">Current Forecast</h4>
-        </div>
+  <div class="card text-white bg-primary w-50 row">
+    <!-- <img class="card-img-top" src="holder.js/100px180/" alt="Title"> -->
+    <div id="currentforecast-container" class="card-body">
+      <h4 class="card-title">Current Forecast</h4>
+      <p class="card-text"></p>
     </div>
+  </div>
     
-    <div class="card" style="display: flex; flex-direction: column; flex-wrap: wrap; align-items: flex-end;">
-            <div id="forecast-container" class="card-body"></div>
+    <div class="card" style="display: flex; flex-direction: column; flex-wrap: wrap; align-items: flex-end;";>
+            <div id="forecast-container" class="card-body">
+              <h3 class="card-title">5 Day Forecast</h3>
+              <p class="card-text"></p>
+            </div>
         </div>
     </div>
 
-    <aside id="cities" class="card">
+    <div id="history" class="card w-25">
         <h2>Cities</h2>
-        <button id="city-list"></button>
+        <button type="submit2" id="city-list"></button>
     </div>
   </main>
   <footer>
@@ -57,6 +61,7 @@ flex-direction: column;">
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   <script src="assets/script.js"></script>
+  <!-- <script src="junk.js"></script> -->
 </body>
 
 </html>

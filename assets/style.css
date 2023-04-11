@@ -9,6 +9,6 @@ border-style: dotted;
 size-adjust: auto;
 }
 
-.date {
+#date {
     font-weight: bold;
 }
