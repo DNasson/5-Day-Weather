@@ -40,12 +40,35 @@ flex-direction: column;">
               <p class="card-text"></p>
             </div>
         </div>
-    </div>
 
     <div id="history" class="card w-25">
         <h2>Cities</h2>
-        <button type="submit2" id="city-list"></button>
+        <button type="submit2" id="city-list" onclick="displayWeather()"></button>
     </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Weather</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modalImageDisplay">
+  
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  
   </main>
   <footer>
     <!-- place footer here -->
