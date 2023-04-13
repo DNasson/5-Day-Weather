@@ -28,10 +28,17 @@ In completing this application I learned how event listeners worked in that they
 
 The user will be presented with a screen with placeholders for the information they will search for. Upon searching for a city name they will have the current weather and a 5-day forecast displayed. Next to the current forecast there will be a row of buttons showing the previously searched cities upon clicking they will be able to get that forecast information displayed again. 
 
+Deployed URL: https://dnasson.github.io/5-Day-Weather/
+GitHub Repository URL: https://github.com/DNasson/5-Day-Weather
+
+Opening Screenshot: ![A8B3777B-2CCC-4C57-AEBB-CFABCAA34593](https://user-images.githubusercontent.com/123035338/231852385-b6837560-cfec-444d-9c35-84145480d676.jpeg)
+Screenshot with searches: ![AAB3147C-C00C-4912-B7AC-2E371359D725](https://user-images.githubusercontent.com/123035338/231852401-bebe453c-8094-432c-8c19-4cee6afa5d50.jpeg)
+
+
 ## Credits
 
-Juan Delgado - Tutor
-Blake Davis - Tutor
+Juan Delgado - Tutor <br>
+Blake Davis - Tutor 
 
 ## License
 
