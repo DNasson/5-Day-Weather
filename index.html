@@ -3,7 +3,7 @@
 
 <head>
   <title>Weather Dashboard</title>
-  <!-- Required meta tags -->
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,50 +25,28 @@ flex-direction: column;">
       <input type="text" id="search-input">
       <button type="submit">Search city</button>
     </form>
-    
-  <div class="card text-white bg-primary w-50 row">
-    <!-- <img class="card-img-top" src="holder.js/100px180/" alt="Title"> -->
+  <!-- current forecast card -->
+<div style="display: flex;">
+  <div class="card text-white bg-primary w-50 column">
+    <h4 class="card-title">Current Forecast</h4>
     <div id="currentforecast-container" class="card-body">
-      <h4 class="card-title">Current Forecast</h4>
-      <p class="card-text"></p>
     </div>
   </div>
-    
-    <div class="card" style="display: flex; flex-direction: column; flex-wrap: wrap; align-items: flex-end;";>
-            <div id="forecast-container" class="card-body">
-              <h3 class="card-title">5 Day Forecast</h3>
-              <p class="card-text"></p>
-            </div>
-        </div>
-
-    <div id="history" class="card w-25">
-        <h2>Cities</h2>
-        <button type="submit2" id="city-list" onclick="displayWeather()"></button>
+  
+  <!-- search history content -->
+  <div id="history" class="card w-50 column" style="display:flex; justify-content: center;">
+    <h2>Cities</h2>
+    <button type="submit2" id="city-list" ></button>
+  </div>
+</div>
+<!-- 5 day forecast content -->
+  <div class="card">
+    <h3 class="card-title">5 Day Forecast</h3>
+    <div id="forecast-container" class="card-body">
     </div>
+  </div>
 
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-  
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Weather</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modalImageDisplay">
-  
-          </div>
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-  
-        </div>
-  
-      </div>
-    </div>
-  
+   
   </main>
   <footer>
     <!-- place footer here -->
